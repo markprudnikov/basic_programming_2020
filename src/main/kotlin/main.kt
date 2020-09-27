@@ -1,9 +1,5 @@
 package fibonacci
 
-fun checker(argument: String):Int{
-
-    return argument.toInt()
-}
 // F_0 = 0
 // F_1 = 1
 // F_n = F_n-1 + F_n-2 (n >= 2)
