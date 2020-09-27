@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MainKtTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-27T16:56:11" hostname="MacBook-Pro-Mark.local" time="0.025">
+  <properties/>
+  <testcase name="Not an Integer()" classname="MainKtTest" time="0.025"/>
+  <system-out><![CDATA[Your input is not an Integer number!
+kotlin.Unit
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
