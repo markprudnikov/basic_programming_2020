@@ -36,13 +36,11 @@ fun sumsq(n: Int): List<Int>{
 }
 
 // 6. Напишите расширение для списков, реализующее функцию mapAccumL
-data class ListWithExstension(val list: List<Int>){
-    fun mapAccumLAddition(n: Int): Pair<Int,List<Int>>{
-        return n to list.map{it + n}
-    }
-    fun mapAccumLMultiplication(n: Int): Pair<Int,List<Int>>{
-        return n to list.map{it*n}
-    }
+fun  List<Int>.mapAccumLAddition(n: Int): Pair<Int,List<Int>> {
+    return this.fold(n){ result, next -> result + next} to this.map{it + n}
+}
+fun List<Int>.mapAccumLMultiplication(n:Int): Pair<Int,List<Int>>{
+    return this.fold(n){result, next -> result * next} to this.map{it*n}
 }
 
 fun main(){
@@ -63,6 +61,6 @@ fun main(){
     println("Result of sumsq function: ${sumsq(10)}")
 
     println("\nTask 6:")
-    println("Result of mapAccumL for addition: ${ListWithExstension(listOf(1,2,3,4,5)).mapAccumLAddition(5)}")
-    println("Result of mapAccumL for multiplication: ${ListWithExstension(listOf(1,2,3,4,5)).mapAccumLMultiplication(5)}")
+    println("Result of mapAccumL for addition: ${listOf(1,2,3,4,5).mapAccumLAddition(5)}")
+    println("Result of mapAccumL for multiplication: ${listOf(1,2,3,4,5).mapAccumLMultiplication(5)}")
 }
